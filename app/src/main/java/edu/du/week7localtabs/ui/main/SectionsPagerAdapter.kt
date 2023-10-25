@@ -8,7 +8,8 @@ import edu.du.week7localtabs.R
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_text_1,
-    R.string.tab_text_2
+    R.string.tab_text_2,
+    R.string.tab_text_3
 )
 
 /**
@@ -21,7 +22,8 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> ForestRoom5Fragment.newInstance()
-            else -> TablePublicHouseFragment.newInstance()
+            1 -> TablePublicHouseFragment.newInstance()
+            else -> FavoriteBarRestaurantFragment.newInstance()
         }
     }
 
@@ -30,7 +32,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     }
 
     override fun getCount(): Int {
-        // Show 2 total pages.
-        return 2
+        // Show 3 total pages.
+        return 3
     }
 }
